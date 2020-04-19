@@ -1,0 +1,64 @@
+												     Report for phase1 and phase2 
+
+List of all the instructions that code does not support:
+->	lui
+->	auipc
+->	unsigned branch
+
+
+
+
+Assumptions:
+->	la is not handled like venus we have made this a new instruction type 
+->	To remove ambiguity of different types of lw 
+				1.  lw x25 var
+				2. lw x25 0(x10)
+		we break first instruction in following instructions
+				la x25 var
+				lw x25 0(x25)
+->last instruction must be
+		swi 0x11		->Exit instruction
+->	Memory consists of 4000 rows and 8 columns in which stack is lower of the memory
+->	j label  must be replaced by jal x0 label
+->	register name must start with "x"
+
+
+Logic:
+	->	All instructions of different types are mapped with their type, opcode, funct3 and funct7
+	->	Original code is parsed to remove comment and comma
+	->	li, lb, lw are handled as pseudo instructions
+	->	Label are mapped according to difference between PC of calling and definition
+	->	Variables of .data are replaced as immidiate(index at which variable is stored in memory)
+	->	Machine code is generated according to instruction type
+
+
+
+	->	Machine code which is output of phase1 is used as phase2 input
+	->  Instruction and PC are stored in vectors
+
+	Fetch:
+	PC is incremented
+
+	Decode:
+	Instruction is decoded
+	Generate corresponding ALU signal and Memory signal
+	Impliment MUXB
+
+	Execute:
+	Perform corresponding ALU operation
+	Branch offset is taken under consideration
+
+
+	Memory:
+	Read and write in memory
+	Impliment MUXY
+
+	Write:
+	Write back in register file (Depends on write register signal)
+
+
+
+
+Limitation:
+
+->	Accessing Variable address should not cross memory matrix range

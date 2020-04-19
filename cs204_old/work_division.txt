@@ -1,0 +1,48 @@
+Kamal Sharma (2017csb1084)
+					
+					Mapping of different instructions
+					Original code to basic code conversion
+					Machine code conversion
+					Generate MUXes signal in phase2 and handling -ve labels and immidiates
+					Testing
+
+
+
+Nitin (2017csb1093)
+				
+					Execute stage
+					Memory read and write (Memory stage)
+					Inter stage linking (buffer registers)
+					Working on GUI
+					Testing
+
+
+Jai Garg (2017csb1081)
+
+					Decode stage
+					Generation of ALU signals and memory signals
+					Execute stage
+
+
+Kapil Dev (2017csb1085)
+		
+					Break down of pseudo instruction 
+					Code abstraction (makes debugging easy)
+					Parsing original code
+					Mapping labels
+
+
+Piyush Lodhi (2017csb1097)
+					
+					Handle .data part in memory class (used in both phase 1 and 2)
+					Memory handling (writing in memory)
+					Creation of instruction data set
+
+
+
+
+Everyone is involved in discussion and DEBUGGING of code at different scenerios.
+
+
+
+

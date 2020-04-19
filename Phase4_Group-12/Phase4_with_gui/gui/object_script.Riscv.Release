@@ -1,0 +1,11 @@
+release/main.o
+release/mainwindow.o
+release/original_to_basic.o
+release/memoryclass.o
+release/make_map.o
+release/machine_conv.o
+release/phase.o
+release/phase2.o
+release/highlighter.o
+release/moc_mainwindow.o
+release/moc_highlighter.o

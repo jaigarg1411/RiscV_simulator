@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>520</width>
+    <height>322</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QTabWidget" name="Tab">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="Editor">
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <attribute name="title">
+        <string>Editor</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QTextEdit" name="textEdit">
+            <property name="font">
+             <font>
+              <pointsize>16</pointsize>
+             </font>
+            </property>
+            <property name="html">
+             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:15pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Simulator">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="tabletTracking">
+        <bool>true</bool>
+       </property>
+       <attribute name="title">
+        <string>Simulator</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="1">
+         <widget class="QPushButton" name="pushButton_step">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>Stack-data trace</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" rowspan="2">
+         <widget class="QTabWidget" name="tabWidget_2">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="Registers">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="mouseTracking">
+            <bool>true</bool>
+           </property>
+           <property name="tabletTracking">
+            <bool>true</bool>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <attribute name="title">
+            <string>Registers</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QScrollArea" name="scrollArea">
+              <property name="widgetResizable">
+               <bool>true</bool>
+              </property>
+              <widget class="QWidget" name="scrollAreaWidgetContents">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>224</width>
+                 <height>840</height>
+                </rect>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_4">
+                <item row="10" column="0">
+                 <widget class="QLabel" name="x10">
+                  <property name="text">
+                   <string>a0 (x10)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="21" column="1">
+                 <widget class="QLineEdit" name="val_x21"/>
+                </item>
+                <item row="14" column="1">
+                 <widget class="QLineEdit" name="val_x14"/>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="val_x0"/>
+                </item>
+                <item row="23" column="0">
+                 <widget class="QLabel" name="x23">
+                  <property name="text">
+                   <string>s7 (x23)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="30" column="1">
+                 <widget class="QLineEdit" name="val_x30"/>
+                </item>
+                <item row="15" column="0">
+                 <widget class="QLabel" name="x15">
+                  <property name="text">
+                   <string>a5 (x15)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="28" column="0">
+                 <widget class="QLabel" name="x28">
+                  <property name="text">
+                   <string>t3 (x28)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="25" column="1">
+                 <widget class="QLineEdit" name="val_x25"/>
+                </item>
+                <item row="31" column="1">
+                 <widget class="QLineEdit" name="val_x31"/>
+                </item>
+                <item row="26" column="0">
+                 <widget class="QLabel" name="x26">
+                  <property name="text">
+                   <string>s10 (x26)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="11" column="0">
+                 <widget class="QLabel" name="x11">
+                  <property name="text">
+                   <string>a1 (x11)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="29" column="0">
+                 <widget class="QLabel" name="x29">
+                  <property name="text">
+                   <string>t4 (x29)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="18" column="1">
+                 <widget class="QLineEdit" name="val_x18"/>
+                </item>
+                <item row="22" column="1">
+                 <widget class="QLineEdit" name="val_x22"/>
+                </item>
+                <item row="13" column="0">
+                 <widget class="QLabel" name="x13">
+                  <property name="text">
+                   <string>a3 (x13)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="1">
+                 <widget class="QLineEdit" name="val_x8"/>
+                </item>
+                <item row="19" column="0">
+                 <widget class="QLabel" name="x19">
+                  <property name="text">
+                   <string>s3 (x19)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="1">
+                 <widget class="QLineEdit" name="val_x6"/>
+                </item>
+                <item row="7" column="0">
+                 <widget class="QLabel" name="x7">
+                  <property name="text">
+                   <string>t2 (x7)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="26" column="1">
+                 <widget class="QLineEdit" name="val_x26"/>
+                </item>
+                <item row="22" column="0">
+                 <widget class="QLabel" name="x22">
+                  <property name="text">
+                   <string>s6 (x22)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="16" column="0">
+                 <widget class="QLabel" name="x16">
+                  <property name="text">
+                   <string>a6 (x16)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QLineEdit" name="val_x4"/>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="x2">
+                  <property name="text">
+                   <string>sp (x2)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="12" column="1">
+                 <widget class="QLineEdit" name="val_x12"/>
+                </item>
+                <item row="14" column="0">
+                 <widget class="QLabel" name="x14">
+                  <property name="text">
+                   <string>a4 (x14)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="21" column="0">
+                 <widget class="QLabel" name="x21">
+                  <property name="text">
+                   <string>s5 (x21)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="27" column="1">
+                 <widget class="QLineEdit" name="val_x27"/>
+                </item>
+                <item row="8" column="0">
+                 <widget class="QLabel" name="x8">
+                  <property name="text">
+                   <string>s0 (x8)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="18" column="0">
+                 <widget class="QLabel" name="x18">
+                  <property name="text">
+                   <string>s2 (x18)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="17" column="0">
+                 <widget class="QLabel" name="x17">
+                  <property name="text">
+                   <string>a7 (x17)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="20" column="1">
+                 <widget class="QLineEdit" name="val_x20"/>
+                </item>
+                <item row="29" column="1">
+                 <widget class="QLineEdit" name="val_x29"/>
+                </item>
+                <item row="16" column="1">
+                 <widget class="QLineEdit" name="val_x16"/>
+                </item>
+                <item row="5" column="1">
+                 <widget class="QLineEdit" name="val_x5"/>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QLabel" name="x4">
+                  <property name="text">
+                   <string>tp (x4)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="27" column="0">
+                 <widget class="QLabel" name="x27">
+                  <property name="text">
+                   <string>s11 (x27)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="15" column="1">
+                 <widget class="QLineEdit" name="val_x15"/>
+                </item>
+                <item row="31" column="0">
+                 <widget class="QLabel" name="x31">
+                  <property name="text">
+                   <string>t6 (x31)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="x1">
+                  <property name="text">
+                   <string>ra (x1)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="19" column="1">
+                 <widget class="QLineEdit" name="val_x19"/>
+                </item>
+                <item row="24" column="0">
+                 <widget class="QLabel" name="x24">
+                  <property name="text">
+                   <string>s8 (x24)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="10" column="1">
+                 <widget class="QLineEdit" name="val_x10"/>
+                </item>
+                <item row="13" column="1">
+                 <widget class="QLineEdit" name="val_x13"/>
+                </item>
+                <item row="23" column="1">
+                 <widget class="QLineEdit" name="val_x23"/>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="x0">
+                  <property name="text">
+                   <string>x0</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="20" column="0">
+                 <widget class="QLabel" name="x20">
+                  <property name="text">
+                   <string>s4 (x20) </string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="9" column="0">
+                 <widget class="QLabel" name="x9">
+                  <property name="text">
+                   <string>s1 (x9)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QLineEdit" name="val_x3"/>
+                </item>
+                <item row="12" column="0">
+                 <widget class="QLabel" name="x12">
+                  <property name="text">
+                   <string>a2 (x12)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="9" column="1">
+                 <widget class="QLineEdit" name="val_x9"/>
+                </item>
+                <item row="5" column="0">
+                 <widget class="QLabel" name="x5">
+                  <property name="text">
+                   <string>t0 (x5)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="1">
+                 <widget class="QLineEdit" name="val_x7"/>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="x3">
+                  <property name="text">
+                   <string>gp (x3)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="30" column="0">
+                 <widget class="QLabel" name="x30">
+                  <property name="text">
+                   <string>t5 (x30)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="24" column="1">
+                 <widget class="QLineEdit" name="val_x24"/>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="val_x1"/>
+                </item>
+                <item row="17" column="1">
+                 <widget class="QLineEdit" name="val_x17"/>
+                </item>
+                <item row="6" column="0">
+                 <widget class="QLabel" name="x6">
+                  <property name="text">
+                   <string>t1 (x6)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="val_x2"/>
+                </item>
+                <item row="11" column="1">
+                 <widget class="QLineEdit" name="val_x11"/>
+                </item>
+                <item row="25" column="0">
+                 <widget class="QLabel" name="x25">
+                  <property name="text">
+                   <string>s9 (x25)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="28" column="1">
+                 <widget class="QLineEdit" name="val_x28"/>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="Memory">
+           <property name="mouseTracking">
+            <bool>true</bool>
+           </property>
+           <property name="tabletTracking">
+            <bool>true</bool>
+           </property>
+           <attribute name="title">
+            <string>Memory</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QTableWidget" name="tableWidget_2">
+              <column>
+               <property name="text">
+                <string>Address</string>
+               </property>
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>+0</string>
+               </property>
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>+1</string>
+               </property>
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>+2</string>
+               </property>
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>+3</string>
+               </property>
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Run</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QTableWidget" name="tableWidget">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustIgnored</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string>PC</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Machine_Code</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Basic_Code</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Original_Code</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignJustify|AlignVCenter</set>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

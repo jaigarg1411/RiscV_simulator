@@ -1,0 +1,11 @@
+debug/main.o
+debug/mainwindow.o
+debug/original_to_basic.o
+debug/memoryclass.o
+debug/make_map.o
+debug/machine_conv.o
+debug/phase.o
+debug/phase2.o
+debug/highlighter.o
+debug/moc_mainwindow.o
+debug/moc_highlighter.o
